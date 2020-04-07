@@ -1,0 +1,16 @@
+<h1>Johnny's job</h1>
+
+<%= form_for(@list, url: '/todolists') do |f| %>
+
+    <h4>Name</h4>
+    <%= f.text_field :name %>
+
+    <h4>Job</h4>
+    <%= f.text_field :job %>
+
+    <h4>Photo</h4>
+    <%= f.attachment_field :image %>
+
+    <%= f.submit '投稿' %>
+
+<% end %>

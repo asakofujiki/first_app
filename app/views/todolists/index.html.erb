@@ -1,0 +1,14 @@
+<h1>LIST</h1>
+ <% @lists.each do |list| %>
+    <p>Talent</p>
+    <span>
+    	<%=link_to list.name, todolist_path(list.id) %>
+    </span>
+    <p>Photo</p>
+    <%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %>
+ <% end %>
+ <br>
+<br>
+<span>
+	<%= link_to "TOP", "/top" %>
+</span>

@@ -1,0 +1,10 @@
+<h1>編集画面</h1>
+<%= form_for(@list, url:"/todolists/#{@list.id}") do |f| %>
+    <h4>Name</h4>
+    <%= f.text_field :name %>
+    <h4>Job</h4>
+    <%= f.text_area :job %>
+    <h4>Photo</h4>
+    <%= f.attachment_field :image %>
+    <%= f.submit '保存' %>
+<% end %>
